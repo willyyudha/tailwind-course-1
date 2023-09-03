@@ -11,6 +11,7 @@
          window.onload = () => {
 
          const mobileMenuIcon = document.getElementById("mobile-menu-button");
+         const streamingMenuItem = document.getElementById("streaming-menu-item");
 
          mobileMenuIcon.onclick = function () {
            if(mobileMenuIcon.classList.contains('open')){
@@ -19,6 +20,14 @@
              mobileMenuIcon.classList.add('open');
            }
          }
+
+         streamingMenuItem.onclick = function () {
+             if(streamingMenuItem.classList.contains('open')){
+               streamingMenuItem.classList.remove('open');
+             }else {
+               streamingMenuItem.classList.add('open');
+             }
+           }
 
        }
 
@@ -40,10 +49,16 @@
                   <div class="transition-all opacity-100 group-open:opacity-0 bg-gray-700 rounded-full w-8 h-1 mt-1"></div>
                   <div class="top-0 transition-all group-open:-rotate-45 bg-gray-700 rounded-full w-8 h-1 mt-1 group-open:-top-2 relative"></div>
                 </div>
-                <div class="peer-open:block absolute top-[62px] left-0 w-full bg-gray-700 hidden">
+                <div class="peer-open:block absolute top-[52px] left-0 w-full bg-gray-700 hidden">
                     <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-zinc-200 hover:text-green-500 transition-colors hover:bg-white/10">Home</div>
                     <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-zinc-200 hover:text-green-500 transition-colors hover:bg-white/10">About Me</div>
-                    <div class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-zinc-200 hover:text-green-500 transition-colors hover:bg-white/10">Streaming</div>
+                    <div id="streaming-menu-item" class="group relative h-full cursor-pointer items-center justify-center text-zinc-200 hover:text-green-500 transition-colors hover:bg-white/10">
+                      <div class="p-4 text-center font-bold">Streaming</div>
+                      <div class="hidden group-open:block">
+                      <div class="relative text-center p-4 text-zinc-200 hover:text-green-500 hover:bg-white/5 transition-colors: ease-in-out"><span>Tiktok</span></div>
+                      <div class="relative text-center p-4 text-zinc-200 hover:text-green-500 hover:bg-white/5 transition-colors: ease-in-out"><span>Youtube</span></div>
+                      </div>
+                    </div>
                 </div>
             </div>
             <div class="md:flex hidden flex-1 items-center justify-end">
