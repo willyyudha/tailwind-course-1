@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+  "homepage": "https://willyyudha.github.io/tailwind-course-1/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "tw:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
